@@ -107,11 +107,11 @@ export default function App() {
           
           <div className="relative z-10 text-center text-white px-6 max-w-4xl">
             <FadeIn>
-              <h1 className="serif text-5xl md:text-7xl font-light mb-6 leading-tight">
+              <h1 className="serif text-5xl md:text-7xl font-normal mb-6 leading-tight">
                 Uniting Indonesians,<br />
                 <span className="italic font-normal">Empowering the Future</span>
               </h1>
-              <p className="text-lg md:text-xl opacity-90 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+              <p className="text-lg md:text-xl opacity-90 mb-10 max-w-2xl mx-auto font-medium leading-relaxed">
                 Join our mission to uplift the most underserved regions of Indonesia — providing shoes, education, and hope, one community at a time.
               </p>
               <button className="bg-[#FAF9F6] text-idf-dark px-8 py-4 rounded-sm text-xs font-bold uppercase tracking-[2px] transition-all hover:bg-idf-red hover:text-white flex items-center gap-3 mx-auto">
@@ -121,16 +121,38 @@ export default function App() {
           </div>
         </section>
 
-        {/* Intro Text Section */}
+        {/* Vision & Mission Section */}
+        <section id="mission" className="py-24 px-6 bg-[#FAF9F6] border-b border-gray-100">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-20">
+              <FadeIn>
+                <div className="space-y-6">
+                  <h2 className="serif text-4xl text-idf-red">Mission Statement</h2>
+                  <p className="text-lg text-idf-gray leading-relaxed font-medium">
+                    The Indonesian Diaspora Foundation is dedicated to uniting Indonesians around the world and fostering a spirit of global humanity. We preserve our rich cultural heritage, provide vital resources to empower both diaspora members and citizens, and lead philanthropic initiatives that uplift vulnerable communities in Indonesia and beyond.
+                  </p>
+                </div>
+              </FadeIn>
+              
+              <FadeIn delay={0.2}>
+                <div className="space-y-6 md:pt-12">
+                  <h2 className="serif text-4xl text-idf-red">Vision</h2>
+                  <p className="text-xl text-idf-gray leading-relaxed font-medium italic">
+                    Empowering a new generation of Indonesian to connect across borders, celebrate their roots, and lead global change through compassion, culture, and collaboration.
+                  </p>
+                </div>
+              </FadeIn>
+            </div>
+          </div>
+        </section>
+
+        {/* Intro Text Section Alternative Headline */}
         <section className="py-24 px-6 bg-white border-b border-gray-50">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-7xl mx-auto text-center">
             <FadeIn>
-              <h2 className="serif text-4xl md:text-5xl text-idf-dark mb-8">
+              <h2 className="serif text-4xl md:text-5xl text-idf-dark mb-8 md:whitespace-nowrap">
                 The true supporter of Indonesian progress
               </h2>
-              <p className="text-lg text-idf-gray leading-[1.8] font-light italic">
-                We are dedicated to fostering global humanity through culture and compassion. From the bustling diaspora networks in Upland to the rural villages of Sumba, our work creates a sustainable bridge between people and opportunity for a healthier, brighter Indonesia.
-              </p>
             </FadeIn>
           </div>
         </section>
@@ -184,7 +206,7 @@ export default function App() {
                     </div>
                     <div>
                       <h3 className="serif text-2xl text-idf-dark mb-3 leading-tight">{item.title}</h3>
-                      <p className="text-idf-gray text-sm leading-relaxed font-light">
+                      <p className="text-idf-gray text-sm leading-relaxed font-medium">
                         {item.desc}
                       </p>
                     </div>
@@ -200,7 +222,7 @@ export default function App() {
           <div className="max-w-7xl mx-auto text-center mb-16">
             <FadeIn>
               <h2 className="serif text-4xl md:text-5xl mb-6">Our Impact So Far</h2>
-              <p className="text-lg opacity-80 font-light max-w-2xl mx-auto mb-10">
+              <p className="text-lg opacity-80 font-medium max-w-2xl mx-auto mb-10">
                 Active programs in across the archipelago, creating real change across communities and ecosystems.
               </p>
               
@@ -213,7 +235,7 @@ export default function App() {
                   <div key={idx} className="border border-white/30 p-10 rounded-sm hover:bg-white/5 transition-colors group">
                     <h4 className="serif text-5xl font-bold mb-4 group-hover:scale-110 transition-transform">{stat.value}</h4>
                     <p className="text-xs uppercase tracking-[2px] font-bold mb-4">{stat.label}</p>
-                    <p className="text-[11px] opacity-70 leading-relaxed font-light">{stat.sub}</p>
+                    <p className="text-[11px] opacity-70 leading-relaxed font-normal">{stat.sub}</p>
                   </div>
                 ))}
               </div>
@@ -233,7 +255,7 @@ export default function App() {
             <div className="text-center mb-16">
               <FadeIn>
                 <h2 className="serif text-4xl md:text-5xl text-idf-dark mb-6">Ongoing Initiatives</h2>
-                <p className="text-idf-gray max-w-2xl mx-auto font-light">
+                <p className="text-idf-gray max-w-2xl mx-auto font-medium">
                   We are dedicated to protecting the archipelago's cultural beauty and promoting sustainable ways of support.
                 </p>
               </FadeIn>
@@ -264,7 +286,7 @@ export default function App() {
                     </div>
                     <div className="p-8 flex-1 flex flex-col">
                       <h3 className="serif text-2xl text-idf-dark mb-4 leading-tight">{item.title}</h3>
-                      <p className="text-idf-gray text-sm leading-relaxed font-light mb-8 italic flex-1">
+                      <p className="text-idf-gray text-sm leading-relaxed font-medium mb-8 italic flex-1">
                         {item.desc}
                       </p>
                       <button className="text-[10px] font-bold text-idf-red uppercase tracking-[1px] flex items-center gap-2 hover:gap-3 transition-all self-start">
@@ -287,7 +309,7 @@ export default function App() {
               <Globe className="w-8 h-8 text-idf-red" />
               <span className="text-2xl font-serif italic">IDF</span>
             </div>
-            <p className="text-white/60 text-sm leading-relaxed font-light pr-8">
+            <p className="text-white/60 text-sm leading-relaxed font-medium pr-8">
               Uniting Indonesians around the world and fostering a spirit of global humanity through culture, compassion, and collaboration.
             </p>
             <div className="flex gap-4">
@@ -299,7 +321,7 @@ export default function App() {
 
           <div className="space-y-6">
             <h4 className="text-[11px] font-bold uppercase tracking-[2px] text-white">Contact Info</h4>
-            <div className="space-y-4 text-sm text-white/60 leading-relaxed font-light">
+            <div className="space-y-4 text-sm text-white/60 leading-relaxed font-medium">
               <p className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-idf-red flex-shrink-0" />
                 305 N 2nd Ave #114, Upland, CA 91786, United States
@@ -317,7 +339,7 @@ export default function App() {
 
           <div className="space-y-6">
             <h4 className="text-[11px] font-bold uppercase tracking-[2px] text-white">Join the Cause</h4>
-            <p className="text-sm text-white/60 leading-relaxed font-light mb-6">
+            <p className="text-sm text-white/60 leading-relaxed font-medium mb-6">
               Stay updated with our latest missions and impact reports in Indonesia.
             </p>
             <div className="flex">
@@ -334,9 +356,10 @@ export default function App() {
         </div>
         
         <div className="max-w-7xl mx-auto mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-[10px] text-white/30 uppercase tracking-widest font-bold">
-            &copy; 2025 Indonesian Diaspora Foundation. Registered 501(c)(3) Nonprofit.
-          </p>
+          <div className="text-[10px] text-white/30 uppercase tracking-widest font-bold space-y-1">
+            <p>&copy; 2026 Indonesian Diaspora Foundation.</p>
+            <p>Powered by <a href="https://builtbyzia.com/" target="_blank" rel="noopener noreferrer" className="text-idf-red hover:underline">BBZ</a></p>
+          </div>
           <div className="flex gap-8 text-[10px] font-bold uppercase tracking-widest text-white/30">
             <a href="#" className="hover:text-idf-red transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-idf-red transition-colors">Terms of Service</a>
