@@ -67,11 +67,8 @@ export default function App() {
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          <div className="flex items-center gap-2.5">
-            <div className="font-extrabold text-2xl tracking-[1px] flex items-center gap-2.5">
-              <Globe className="w-8 h-8 text-idf-red" />
-              <span className="text-idf-dark font-serif italic">IDF</span>
-            </div>
+          <div className="flex items-center">
+            <img src="/assets/images/IDF (4).png" alt="IDF Logo" className="h-12 w-auto object-contain" />
           </div>
           
           <div className="hidden lg:flex items-center gap-8">
@@ -97,24 +94,24 @@ export default function App() {
         <section className="relative h-[650px] overflow-hidden flex items-center justify-center">
           <div className="absolute inset-0">
             <img 
-              src="https://picsum.photos/seed/diaspora/1920/1080?blur=1" 
+              src="/assets/images/pexels-ruyat-supriazi-2154700906-36843397.jpg" 
               alt="Indonesian Diaspora" 
-              className="w-full h-full object-cover grayscale-[0.2]"
+              className="w-full h-full object-cover object-center"
               referrerPolicy="no-referrer"
             />
-            <div className="absolute inset-0 bg-idf-dark/60 backdrop-blur-[2px]"></div>
+            <div className="absolute inset-0 bg-white/75"></div>
           </div>
           
-          <div className="relative z-10 text-center text-white px-6 max-w-4xl">
+          <div className="relative z-10 text-center text-idf-dark px-6 max-w-4xl">
             <FadeIn>
               <h1 className="serif text-5xl md:text-7xl font-normal mb-6 leading-tight">
-                Uniting Indonesians,<br />
+                Uniting <span className="text-idf-red">Indonesians</span>,<br />
                 <span className="italic font-normal">Empowering the Future</span>
               </h1>
-              <p className="text-lg md:text-xl opacity-90 mb-10 max-w-2xl mx-auto font-medium leading-relaxed">
+              <p className="text-lg md:text-xl text-idf-dark mb-10 max-w-2xl mx-auto font-medium leading-relaxed">
                 Join our mission to uplift the most underserved regions of Indonesia — providing shoes, education, and hope, one community at a time.
               </p>
-              <button className="bg-[#FAF9F6] text-idf-dark px-8 py-4 rounded-sm text-xs font-bold uppercase tracking-[2px] transition-all hover:bg-idf-red hover:text-white flex items-center gap-3 mx-auto">
+              <button className="bg-idf-red text-white px-8 py-4 rounded-sm text-xs font-bold uppercase tracking-[2px] transition-all hover:bg-idf-dark flex items-center gap-3 mx-auto">
                 Get Involved <ChevronRight className="w-4 h-4" />
               </button>
             </FadeIn>
@@ -135,7 +132,7 @@ export default function App() {
               </FadeIn>
               
               <FadeIn delay={0.2}>
-                <div className="space-y-6 md:pt-12">
+                <div className="space-y-6">
                   <h2 className="serif text-4xl text-idf-red">Vision</h2>
                   <p className="text-xl text-idf-gray leading-relaxed font-medium italic">
                     Empowering a new generation of Indonesian to connect across borders, celebrate their roots, and lead global change through compassion, culture, and collaboration.
@@ -147,34 +144,34 @@ export default function App() {
         </section>
 
         {/* Intro Text Section Alternative Headline */}
-        <section className="py-24 px-6 bg-white border-b border-gray-50">
+        <section className="pt-24 pb-8 px-6 bg-white border-b border-gray-50">
           <div className="max-w-7xl mx-auto text-center">
             <FadeIn>
-              <h2 className="serif text-4xl md:text-5xl text-idf-dark mb-8 md:whitespace-nowrap">
-                The true supporter of Indonesian progress
+              <h2 className="serif text-4xl md:text-5xl text-idf-dark md:whitespace-nowrap">
+                The true supporter of <span className="text-idf-red">Indonesian</span> progress
               </h2>
             </FadeIn>
           </div>
         </section>
 
         {/* Features Section - 2 Column */}
-        <section className="py-24 px-6 max-w-7xl mx-auto">
+        <section className="pt-8 pb-24 px-6 max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <FadeIn>
               <div className="relative">
                 <div className="rounded-lg overflow-hidden h-[500px] shadow-xl">
                   <img 
-                    src="https://picsum.photos/seed/sumbahope/1000/1200" 
+                    src="/assets/images/Indonesian Diaspora Foundation.jpg" 
                     className="w-full h-full object-cover" 
-                    alt="Sumba Children" 
+                    alt="Indonesian Diaspora Foundation Team" 
                     referrerPolicy="no-referrer"
                   />
                 </div>
                 <div className="absolute -bottom-10 -right-10 w-48 h-48 border-[12px] border-white rounded-lg overflow-hidden hidden md:block">
                   <img 
-                    src="https://picsum.photos/seed/help/400/400" 
+                    src="/assets/images/pexels-sandiyp-35286747.jpg" 
                     className="w-full h-full object-cover" 
-                    alt="Small help" 
+                    alt="Indonesian Culture" 
                     referrerPolicy="no-referrer"
                   />
                 </div>
@@ -223,7 +220,7 @@ export default function App() {
             <FadeIn>
               <h2 className="serif text-4xl md:text-5xl mb-6">Our Impact So Far</h2>
               <p className="text-lg opacity-80 font-medium max-w-2xl mx-auto mb-10">
-                Active programs in across the archipelago, creating real change across communities and ecosystems.
+                Active programs in across the archipelago, creating real change <br /> across communities and ecosystems.
               </p>
               
               <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
@@ -256,7 +253,7 @@ export default function App() {
               <FadeIn>
                 <h2 className="serif text-4xl md:text-5xl text-idf-dark mb-6">Ongoing Initiatives</h2>
                 <p className="text-idf-gray max-w-2xl mx-auto font-medium">
-                  We are dedicated to protecting the archipelago's cultural beauty and promoting sustainable ways of support.
+                  We are dedicated to protecting the archipelago's cultural beauty <br /> and promoting sustainable ways of support.
                 </p>
               </FadeIn>
             </div>
@@ -266,17 +263,17 @@ export default function App() {
                 {
                   title: "Sumba Shoe Project",
                   desc: "Ensuring every child in rural Sumba has a pair of shoes to walk to school with dignity and comfort.",
-                  img: "https://picsum.photos/seed/shoes/800/600"
+                  img: "/assets/images/pexels-andromeda99-35993709.jpg"
                 },
                 {
                   title: "Diaspora Scholarship",
                   desc: "Connecting talented youth in Indonesia with global mentors and educational financial support.",
-                  img: "https://picsum.photos/seed/edu/800/600"
+                  img: "/assets/images/IDF Kids.jpeg"
                 },
                 {
                   title: "Health & Nutrition",
                   desc: "Providing vital nutrition packs to families below the poverty line in East Nusa Tenggara.",
-                  img: "https://picsum.photos/seed/health/800/600"
+                  img: "/assets/images/pexels-ahmad-farhan-162807698-29205715.jpg"
                 }
               ].map((item, idx) => (
                 <FadeIn key={idx} delay={idx * 0.1}>
@@ -305,9 +302,8 @@ export default function App() {
       <footer className="bg-idf-dark text-white py-16 px-6">
         <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-16">
           <div className="space-y-8">
-            <div className="flex items-center gap-2.5">
-              <Globe className="w-8 h-8 text-idf-red" />
-              <span className="text-2xl font-serif italic">IDF</span>
+            <div className="flex items-center">
+              <img src="/assets/images/IDF (4).png" alt="IDF Logo" className="h-12 w-auto object-contain brightness-0 invert" />
             </div>
             <p className="text-white/60 text-sm leading-relaxed font-medium pr-8">
               Uniting Indonesians around the world and fostering a spirit of global humanity through culture, compassion, and collaboration.
